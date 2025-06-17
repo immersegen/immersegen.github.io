@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="ImmerseGen: Agent-Guided Immersive World Generation with Alpha-Textured Proxies"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ImmerseGen</title>
+    <link rel="stylesheet" href="./static/css/own.min.css" />
+    <link rel="stylesheet" href="./static/css/custom.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans|Shantell+Sans|Montserrat|Quicksand|Nunito+Sans"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/index.min.css" />
+    <script defer src="./static/js/index.min.js"></script>
+  </head>
+
+  <body>
+    <section class="hero">
+      <div class="hero-body-background">
+        <div class="hero-body-background-div"></div>
+        <div style="text-align: center; z-index: 1; margin-top: 1vw">
+          <p
+            class="acmefont shadowtext high-font"
+            style="
+              color: rgba(255, 255, 255, 0.75);
+              font-size: 8vw;
+              font-weight: 600;
+              font-family: 'Futura', sans-serif;
+              text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            "
+          >
+            ImmerseGen
+          </p>
+
+          <p
+            class="acmefont shadowtext high-font"
+            style="
+              color: rgba(255, 255, 255, 0.8);
+              font-size: 3vw;
+              font-family: 'Futura', sans-serif;
+            "
+          >
+            Agent-Guided Immersive World Generation with Alpha-Textured Proxies
+          </p>
+        </div>
+        <div class="columns is-centered" style="z-index: 1; margin-top: -1vw">
+          <div class="column has-text-centered">
+            <div
+              class="publication-authors shadowtext authors-font"
+              style="
+                color: #ffffff;
+                font-size: max(10px, 1.2vw);
+                font-family: DMSerifText;
+              "
+            >
+              <span class="author-block sansfont"
+                >Jinyan Yuan<sup>1*</sup>&nbsp;&nbsp;&nbsp;</span
+              >
+              <span class="author-block sansfont"
+                >Bangbang Yang<sup>1*</sup>&nbsp;&nbsp;&nbsp;</span
+              >
+              <span class="author-block sansfont"
+                >Keke Wang<sup>1</sup>&nbsp;&nbsp;&nbsp;</span
+              >
+              <span class="author-block sansfont"
+                >Panwang Pan<sup>1</sup>&nbsp;&nbsp;&nbsp;</span
+              >
+              <span class="author-block sansfont"
+                >Lin Ma<sup>1</sup>&nbsp;&nbsp;&nbsp;</span
+              ><br />
+              <span class="author-block sansfont"
+                >Xuehai Zhang<sup>1</sup>&nbsp;&nbsp;&nbsp;</span
+              >
+              <span class="author-block sansfont"
+                >Xiao Liu<sup>1</sup>&nbsp;&nbsp;&nbsp;</span
+              >
+              <span class="author-block sansfont"
+                >Zhaopeng Cui<sup>2</sup>&nbsp;&nbsp;&nbsp;</span
+              >
+              <span class="author-block sansfont"
+                >Yuewen Ma<sup>1</sup>&nbsp;&nbsp;&nbsp;</span
+              >
+            </div>
+
+            <div
+              class="publication-authors shadowtext authors-font"
+              style="
+                color: #ffffff;
+                font-size: max(8px, 1.2vw);
+                font-family: DMSerifText;
+                margin-bottom: 4pt;
+              "
+            >
+              <span class="author-block sansfont"
+                ><sup>1</sup>PICO, Bytedance</span
+              >
+              <span class="author-block sansfont">&nbsp;&nbsp;</span>
+              <span class="author-block sansfont"
+                ><sup>2</sup>State Key Laboratory of CAD&amp;CG, Zhejiang
+                University
+              </span>
+            </div>
+
+            <div
+              class="publication-authors shadowtext authors-font"
+              style="
+                color: #ffffff;
+                font-size: 1.2vw;
+                font-family: DMSerifText;
+                margin-bottom: 4pt;
+              "
+            >
+              <span
+                class="author-block sansfont"
+                style="font-size: max(8px, 1vw)"
+                >*Equal Contribution</span
+              >
+
+              <span class="author-block sansfont">&nbsp;&nbsp;</span>
+            </div>
+
+            <div
+              class="column has-text-centered"
+              style="font-family: DMSerifText"
+            >
+              <div class="publication-links">
+                <span class="link-block">
+                  <a
+                    href="static/assets/paper/paper.pdf"
+                    class="external-link button is-normal is-rounded light-btn btn-font"
+                  >
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span class="sansfont" style="font-size: max(10px, 1vw)"
+                      >Paper</span
+                    >
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a
+                    href=""
+                    class="external-link button is-normal is-rounded light-btn btn-font"
+                  >
+                    <span class="icon">
+                      <i class="fa-brands fa-github"></i>
+                    </span>
+                    <span class="sansfont" style="font-size: max(10px, 1vw)"
+                      >Code(Coming Soon)</span
+                    >
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 2em">
+      <div class="columns" style="display: flex; width: 100%">
+        <div class="v-column-left"></div>
+
+        <div class="v-column-center" style="text-align: center; display: flex">
+          <img
+            width="100%"
+            src="static/assets/teaser.jpg"
+            alt="Image"
+            style="border-radius: 6pt"
+          />
+        </div>
+        <div class="v-column-right"></div>
+      </div>
+
+      <div class="note-font" style="margin-top: 0pt">
+        <p align="center">
+          ImmerseGen creates panoramic 3D worlds from input prompts by
+          generating compact alpha-textured proxies through agent-guided asset
+          design and arrangement, alleviating the reliance on rich and complex
+          assets while ensuring diversity and realism, which is tailored for
+          immersive VR experience.
+        </p>
+      </div>
+    </section>
+
+    <section class="hero">
+      <div
+        class="hero-body-subtitle"
+        style="display: block; padding-bottom: 1em; padding-top: 1em"
+      >
+        <div class="columns is-centered has-text-centered">
+          <div class="container is-max-maxwidth">
+            <div class="title sansfont mode-font" style="font-family: 'Futura'">
+              Video
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered" style="padding: 2em">
+        <div class="column is-three-quarters">
+          <div
+            class="video-container"
+            style="
+              position: relative;
+              padding-bottom: 40%;
+              padding-top: 20ex;
+              height: 0;
+              overflow: hidden;
+            "
+          >
+            <iframe
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 6pt;
+              "
+              src="https://www.youtube.com/embed/rKzFvaPVjYM"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero">
+      <div class="hero-body-subtitle" style="display: block">
+        <div class="columns is-centered has-text-centered">
+          <div class="container is-max-maxwidth">
+            <div class="title sansfont mode-font" style="font-family: 'Futura'">
+              Gallery
+            </div>
+            <div
+              class="note-font"
+              style="margin-top: -10pt; font-style: italic"
+            >
+              *Screen Recording from VR Headset
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column">
+            <div class="content">
+              <div class="column content">
+                <video
+                  id="dollyzoom"
+                  autoplay
+                  controls
+                  muted
+                  loop
+                  playsinline
+                  height="100%"
+                >
+                  <source
+                    src="static/assets/gallery/coast.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <div class="has-text-centered">
+                  <p
+                    class="sansfont"
+                    style="
+                      margin-top: 5px;
+                      font-size: 0.9em;
+                      font-style: italic;
+                    "
+                  >
+                    Island
+                  </p>
+                </div>
+              </div>
+              <div class="column content">
+                <video
+                  id="dollyzoom"
+                  autoplay
+                  controls
+                  muted
+                  loop
+                  playsinline
+                  height="100%"
+                >
+                  <source
+                    src="static/assets/gallery/desert.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <div class="has-text-centered">
+                  <p
+                    class="sansfont"
+                    style="
+                      margin-top: 5px;
+                      font-size: 0.9em;
+                      font-style: italic;
+                    "
+                  >
+                    Desert
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="content">
+              <div class="column content">
+                <video
+                  id="dollyzoom"
+                  autoplay
+                  controls
+                  muted
+                  loop
+                  playsinline
+                  height="100%"
+                >
+                  <source
+                    src="static/assets/gallery/lake.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <div class="has-text-centered">
+                  <p
+                    class="sansfont"
+                    style="
+                      margin-top: 5px;
+                      font-size: 0.9em;
+                      font-style: italic;
+                    "
+                  >
+                    Lake
+                  </p>
+                </div>
+              </div>
+
+              <div class="column content">
+                <video
+                  id="dollyzoom"
+                  autoplay
+                  controls
+                  muted
+                  loop
+                  playsinline
+                  height="100%"
+                >
+                  <source
+                    src="static/assets/gallery/anime.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <div class="has-text-centered">
+                  <p
+                    class="sansfont"
+                    style="
+                      margin-top: 5px;
+                      font-size: 0.9em;
+                      font-style: italic;
+                    "
+                  >
+                    Anime Room
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="content">
+              <div class="column content">
+                <video
+                  id="dollyzoom"
+                  autoplay
+                  controls
+                  muted
+                  loop
+                  playsinline
+                  height="100%"
+                >
+                  <source
+                    src="static/assets/gallery/forest.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <div class="has-text-centered">
+                  <p
+                    class="sansfont"
+                    style="
+                      margin-top: 5px;
+                      font-size: 0.9em;
+                      font-style: italic;
+                    "
+                  >
+                    Forest
+                  </p>
+                </div>
+              </div>
+              <div class="column content">
+                <video
+                  id="dollyzoom"
+                  autoplay
+                  controls
+                  muted
+                  loop
+                  playsinline
+                  height="100%"
+                >
+                  <source
+                    src="static/assets/gallery/city.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <div class="has-text-centered">
+                  <p
+                    class="sansfont"
+                    style="
+                      margin-top: 5px;
+                      font-size: 0.9em;
+                      font-style: italic;
+                    "
+                  >
+                    Futuristic City
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero">
+      <div class="hero-body-subtitle" style="display: block">
+        <div class="columns is-centered has-text-centered">
+          <div class="container is-max-maxwidth">
+            <div class="title sansfont mode-font" style="font-family: 'Futura'">
+              <!-- Basic Mode -->
+              Framework
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 2em; padding-bottom: 2em">
+      <img
+        width="100%"
+        src="static/assets/framework.jpg"
+        alt="Image"
+        style="border-radius: 6pt"
+      />
+      <div class="note-font" style="margin-top: 0pt">
+        Given a user's textual input, our method first retrieve a base terrain
+        and apply terrain-conditioned texturing to synthesize RGBA terrain
+        texture and skybox aligned with base mesh, forming the base world. Next,
+        We enrich the environment by introducing lightweight assets, where
+        VLM-based asset agents are used to select appropriate templates, design
+        detailed asset prompts and determine asset arrangement within the scene.
+        Each placed asset is then instantiated as alpha-textured assets through
+        context-aware RGBA texture synthesis. Finally, we enhance multi-modal
+        immersion by incorporating dynamic visual effects and synthesized
+        ambient sound based on the generated scene.
+      </div>
+    </section>
+
+    <footer class="footer" style="padding: 2em">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Bulma</strong> by
+          <a href="https://jgthms.com">Jeremy Thomas</a>. The website content is
+          licensed
+          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >CC BY NC SA 4.0</a
+          >. Template is from <a href="https://4k4dgen.github.io/">4K4DGen</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
